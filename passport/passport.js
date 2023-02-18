@@ -27,7 +27,7 @@ passport.use(
         if (user) {
           console.log("User already exits in DB", user);
           next(null, user);
-          // cookietoken()
+          cookietoken();
         } else {
           User.create({
             name: profile.displayName,
@@ -43,7 +43,7 @@ passport.use(
         }
       });
 
-      //   next();
+      next();
     }
   )
 );
